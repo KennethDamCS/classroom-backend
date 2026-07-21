@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
 
         // If department filter exists, match department name
         if (department) {
-            filterConditions.push(ilike(departments.name, `%${search}%`));
+            filterConditions.push(ilike(departments.name, `%${department}%`));
         }
 
         // Combine all filters using AND if any exist
